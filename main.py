@@ -1,6 +1,5 @@
 from Database import Database_class
 from Controllers import Student_controller
-import os
 
 
 def init():
@@ -30,7 +29,6 @@ def Search_Student(studentcontroller):
 
 
 def Student(studentcontroller):
-	clear = lambda: os.system('cls')
 	userinput = input("Press\n"
 	                  "'A' to Add a Student\n"
 	                  "'L' to List all Students\n"
