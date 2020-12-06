@@ -21,3 +21,6 @@ class Database:
 		cursor.execute(
 			"CREATE TABLE IF NOT EXISTS students(id integer PRIMARY KEY,name text NOT NULL,fathername text NOT NULL,mothername text NOT NULL,rollno text NOT NULL UNIQUE)")
 		self.connection.commit()
+
+	def close_connection(self):
+		self.connection.close()

@@ -1,4 +1,5 @@
 from Ui import student_screen
+from Ui import books_screen
 
 
 def mainmenu(controller_objects):
@@ -14,7 +15,7 @@ def mainmenu(controller_objects):
 		elif userinput == 'T':
 			pass
 		elif userinput == 'B':
-			pass
+			books_screen.Books(bookscontroller=controller_objects[1])
 		else:
 			print("Wrong Command")
 		userinput = input("Press\n"

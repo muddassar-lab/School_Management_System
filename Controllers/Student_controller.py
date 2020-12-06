@@ -11,7 +11,11 @@ class Student_controller:
 		roll_no = input("Enter Student Roll No : ")
 		father_name = input("Enter Father Name : ")
 		mother_name = input("Enter Mother Name : ")
-		self.student_database.add_student(student_name, father_name, mother_name, roll_no)
+		check = self.student_database.check_student(rollno=roll_no)
+		if check is True:
+			print("Student With This Roll No already Exists.")
+		elif check is False:
+			self.student_database.add_student(student_name, father_name, mother_name, roll_no)
 
 	def list_students(self):
 		data = self.student_database.list_students()
